@@ -1,6 +1,6 @@
 # Chest X-Ray Pneumonia Detection Project
 
-This project aims to detect pneumonia from chest X-ray images using Convolutional Neural Network (CNN) models. The dataset is sourced from Kaggle and includes both Pneumonia and Normal categories. The project explores different CNN architectures, preprocessing techniques, and addresses dataset imbalance issues.
+This project aims to detect pneumonia from chest X-ray images using Convolutional Neural Network (CNN) models. The dataset is sourced from <a href="https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia">Kaggle </a> and includes both Pneumonia and Normal categories. The project explores different CNN architectures, preprocessing techniques, and addresses dataset imbalance issues.
 
 ## Table of Contents
 1. [Dataset Description](#dataset-description)
