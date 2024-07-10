@@ -1,4 +1,4 @@
-# Chest X-Ray Pneumonia Detection Project
+# Chest X-Ray Pneumonia Detection Using CNN 
 
 This project aims to detect pneumonia from chest X-ray images using Convolutional Neural Network (CNN) models. The dataset is sourced from <a href="https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia">Kaggle </a> and includes both Pneumonia and Normal categories. The project explores different CNN architectures, preprocessing techniques, and addresses dataset imbalance issues.
 
@@ -81,7 +81,7 @@ A Flask web application was developed to provide functionalities for displaying 
 ### Features
 
 - **Loading Test Images**:
-    - Displays the test images available in the specified directory.
+    - Displays the test images available in the test_images directory.
 - **Predicting Image Label**:
     - Allows users to upload or select a chest X-ray image for prediction.
     - The model predicts and returns whether the image indicates "PNEUMONIA" or "NORMAL".
