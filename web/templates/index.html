@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest X-Ray Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Chest X-Ray Classifier</h1>
+        <form id="upload-form">
+            <label for="file-input" class="custom-file-upload">
+                <i class="fas fa-cloud-upload-alt"></i> Choose Image
+            </label>
+            <input type="file" name="file" id="file-input">
+            <button type="submit">Upload and Predict</button>
+        </form>
+
+        <h2>Or select an image </h2>
+        <div id="folder-structure">
+            {% for folder, images in test_images.items() %}
+                {% if folder %}
+                    <div class="folder">
+                        <h3>{{ folder }}</h3>
+                        {% for image in images %}
+                            <img src="{{ url_for('static', filename='test_images/' ~ folder ~ '/' ~ image) }}" alt="{{ image }}" class="test-image" onclick="predictImage('{{ image }}', '{{ folder }}')">
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div id="loading-icon" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
